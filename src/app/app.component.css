@@ -1,0 +1,31 @@
+/* Déclaration de la police Bubbleboddy Neue */
+@font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('/assets/fonts/bubbleboddyneue-regular trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('/assets/fonts/BubbleboddyNeue-Bold Trial.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('/assets/fonts/BubbleboddyNeue-ExtraBold Trial.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  /* Application de la police aux titres */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bubbleboddy Neue', sans-serif;
+  }
+  
+  /* Appliquer Comfortaa pour le texte courant */
+  body {
+    font-family: 'Comfortaa', sans-serif;
+  }

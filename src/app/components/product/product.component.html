@@ -1,0 +1,23 @@
+
+<div *ngIf="product; else notFound" class="product-details">
+    <div class="product-image">
+      <img alt="figurines" [src]="product.imageUrl" [alt]="product.name" />
+    </div>
+    <div class="product-info">
+      <h1>{{ product.name }}</h1>
+      <p class="description">{{ product.description }}</p>
+      <div class="details">
+        <h3>Détails :</h3>
+        <ul>
+          <li>Matériau : {{ product.details?.material }}</li>
+          <li>Hauteur : {{ product.details?.height }}</li>
+          <li>Poids : {{ product.details?.weight }}</li>
+        </ul>
+      </div>
+      <p class="price">Prix : {{ product.price | currency: 'EUR' }}</p>
+    </div>
+  </div>
+  
+  <ng-template #notFound>
+    <p class="not-found">Produit non trouvé. Veuillez réessayer.</p>
+  </ng-template>

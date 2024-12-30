@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+/* Déclaration des polices Bubbleboddy Neue */
+@font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('assets/fonts/bubbleboddyneue-regular trial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('assets/fonts/BubbleboddyNeue-Bold Trial.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('assets/fonts/BubbleboddyNeue-ExtraBold Trial.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('assets/fonts/BubbleboddyNeue-Light Trial.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bubbleboddy Neue';
+    src: url('assets/fonts/BubbleboddyNeue-Thin Trial.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }

@@ -1,0 +1,106 @@
+/* Logo du site */
+nav .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligne le logo à gauche */
+}
+
+nav .logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Menu déroulant du hamburger */
+.navbar-collapse {
+    width: 100%; /* Le menu occupe toute la largeur */
+    text-align: left; /* Aligne le menu à gauche */
+    position: absolute; /* Assure que le menu soit positionné correctement */
+    top: 100%; /* Empêche le menu d'empiéter sur la bannière */
+    left: 0; /* Assure que le menu reste dans les limites du fond noir */
+    background-color: #151217; /* Assure que le fond du menu soit noir */
+    z-index: 1050; /* Assure que le menu soit au-dessus du contenu */
+  
+  }
+
+.navbar-nav {
+  width: 100%;
+  justify-content: flex-start; /* Aligne les éléments du menu à gauche */
+  padding: 0; /* Enlève les marges internes */
+}
+
+
+/* Couleur par défaut des liens */
+.navbar-nav .nav-item .nav-link {
+  color: #DA001E; /* Couleur par défaut des liens */
+  padding: 10px; /* Padding pour les éléments de menu */
+  text-align: left; /* Garde les liens alignés à gauche */
+  display: block; /* Assure que chaque lien occupe une ligne entière */
+  font-size: 1.2rem; /* Augmente la taille de la police */
+  font-family: 'Comfortaa', sans-serif; /* Applique la police Comfortaa */  
+}
+
+
+
+/* Lorsque l'on survole un lien (pour plus de visibilité) */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #FFD700; /* La couleur change au survol pour attirer l'attention */
+}
+
+/* Desktop : Alignement du menu à droite */
+@media (min-width: 769px) {
+  .navbar-nav {
+    justify-content: flex-end; /* Aligne les liens à droite sur desktop */
+  }
+
+  .navbar-collapse {
+    position: static; /* Le menu ne doit pas être positionné absolu sur desktop */
+    background-color: transparent; /* Fond transparent pour le menu sur desktop */
+    width: auto; /* Taille automatique pour ne pas forcer à 100% */
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    text-align: center; /* Centre les textes pour desktop */
+    
+  }
+}
+
+
+/* Menu pour les écrans petits (tablette et mobile) */
+@media (max-width: 768px) {
+  /* Sur les petits écrans, positionne le bouton hamburger à droite */
+  .navbar-toggler {
+   
+    align-self: flex-start; /* Assure que le bouton hamburger reste à droite */
+  }
+
+/* Empêche l'empiètement du menu sur le contenu */
+.navbar-collapse {
+  position: absolute;
+  top: 100%; /* Empêche le menu d'empiéter sur la bannière */
+  left: 0; /* Assure que le menu reste dans les limites du fond noir */
+  width: 100%; /* Le menu occupe toute la largeur */
+  background-color:  #151217; /* Assure que le fond du menu soit noir */
+  z-index: 1050; /* Assure que le menu soit au-dessus du contenu */
+}
+
+  
+  /* Menu en colonne */
+  .navbar-nav {
+    flex-direction: column; /* Le menu s'affiche sous forme de colonne */
+    width: 100%; /* Le menu occupe toute la largeur */
+    text-align: left; /* Aligne les éléments du menu à gauche */
+  }
+  
+  /* Éléments du menu déroulant */
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  /* Ajustements pour améliorer la lisibilité du logo et du menu */
+  .navbar-nav .nav-link, .nav-item {
+    padding: 10px;
+    text-align: left; /* Garde les liens alignés à gauche */
+    width: 100%; /* Le lien occupe toute la largeur */
+    font-size: 1.1rem; /* Légèrement plus petite taille pour les mobiles */
+  }
+}

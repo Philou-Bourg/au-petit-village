@@ -1,0 +1,35 @@
+<!-- src/app/components/header/header.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Logo cliquable qui redirige vers la page d'accueil -->
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/images/Logo_au_petit_village.jpg" alt="Logo Au Petit Village" class="logo" />
+  </a>
+
+  <!-- Bouton du menu hamburger -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menu de navigation -->
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeMenu()">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="closeMenu()">À propos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,93 @@
+/* Application de la police Comfortaa pour le texte courant */
+body {
+  font-family: 'Comfortaa', sans-serif;
+}
+
+/* Application de la police Bubbleboddy Neue aux titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bubbleboddy Neue', sans-serif;
+  color: #333; /* Couleur des titres */
+}
+
+/* Titres h1 */
+h1 {
+  font-size: 2.5rem; /* Taille par défaut pour h1 */
+  color: #333;
+  text-align: center; /* Centrage du titre principal */
+  margin-bottom: 20px; /* Espacement avec les sections suivantes */
+}
+
+/* Responsivité pour h1 sur les écrans plus petits */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Taille pour tablettes */
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem; /* Taille pour mobiles */
+  }
+}
+
+/* Titres h2 */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px; /* Espacement entre le titre et le contenu */
+}
+
+/* Responsivité pour h2 */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Conteneur principal */
+.about-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Aligne les sections en colonne */
+  gap: 20px; /* Ajoute de l'espacement entre les sections */
+}
+
+/* Sections individuelles */
+section {
+  display: flex;
+  flex-direction: column; /* Les éléments d'une section sont alignés verticalement */
+  margin-bottom: 20px; /* Espacement global entre les sections */
+}
+
+/* Paragraphes */
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6; /* Améliore la lisibilité */
+}
+
+/* Responsivité pour les paragraphes */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-container {
+    padding: 10px;
+  }
+  p {
+    font-size: 13px;
+  }
+}

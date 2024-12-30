@@ -1,0 +1,250 @@
+/* src/app/components/home/home.component.css */
+
+
+/* Bannière */
+.banner {
+  background-image: url('/assets/images/village.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centre le contenu verticalement */
+  text-align: center;
+  color: white;
+  padding: 15px;
+  height: 100vh; /* J'ajuste si c'est nécessaire */
+  box-sizing: border-box;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column; /* Organise en colonne */
+  justify-content: center; /* Centre le texte verticalement */
+  align-items: center; /* Centre le texte horizontalement */
+  gap: 15px; /* Espacement entre les enfants */
+}
+
+/* Titres dans la bannière */
+.banner-content h1 {
+  font-family: 'Bubbleboddy neue', sans-serif;
+  font-size: 3rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 12px;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Animation d'apparition du titre */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bouton dans la bannière */
+.banner-content button {
+  background-color: #DA001E;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-family: 'Comfortaa', sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Largeur fixe initiale */
+  max-width: 100%; /* S'adapte à l'écran */
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+}
+
+/* Effet au survol du bouton */
+.banner-content button:hover {
+  background-color: #FDD90B;
+  color: #151217;
+}
+
+/* Présentation de l’entreprise */
+.company-description {
+  padding: 20px;
+  background-color: #F9D0A3;
+  color: #151217;
+  font-family: 'Comfortaa', sans-serif;
+  text-align: center;
+  border-bottom: 2px solid #FDD90B;
+}
+
+/* Contrôles de tri/recherche */
+.controls {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ }
+
+.btn-sort {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #DA001E;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-sort:hover {
+  background-color: #FDD90B;
+  color: #151217;
+}
+
+/* Pour centrer les produits */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Pour un espacement régulier entre les produits */
+  gap: 20px; /* Espacement entre les produits */
+  padding: 20px;
+}
+
+.product {
+  max-width: 200px; /* Fixe une taille maximale pour chaque produit */
+  min-height: 300px; /* Hauteur minimale uniforme pour chaque produit */
+  flex-grow: 1; /* Les produits peuvent s'étirer si l'espace le permet */
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Coins arrondis pour un effet plus doux */
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol des produits */
+.product:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  background-color: #f9f9f9; /* Change légèrement la couleur de fond au survol */
+}
+
+/* Image des produits */
+.product img {
+  width: 100%; /* Prend toute la largeur du conteneur */
+  max-height: 200px; /* Une hauteur maximum pour conserver une image fluide */
+  object-fit: contain; /* L'image reste entière sans être recadrée */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Stylisation des liens dans les produits */
+.products-container .product a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Pour les écrans plus larges (desktop et au-delà) */
+@media (min-width: 1025px) {
+  .products-container {
+    justify-content: space-evenly; /* Espacement plus large des produits */
+  }
+
+  .product {
+    max-width: 250px; /* Réduit légèrement la largeur des produits */
+  }
+}
+
+/* Pour les écrans de taille tablette (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .products-container {
+    justify-content: center; /* Centre les produits sur les tablettes */
+  }
+
+  .product {
+    max-width: 300px; /* Largeur des produits plus grande sur tablette */
+  }
+}
+
+/* Pour les écrans plus petits */
+@media (max-width: 768px) {
+  .product {
+    max-width: 100%; /* Sur mobile, le produit prend toute la largeur */
+  }
+  .product img {
+    height: 150px; /* Réduit la hauteur des images sur les écrans plus petits */
+  }
+  .banner-content h1 {
+    font-size: 2rem; /* Redimensionne le titre pour les petits écrans */
+  }
+  .banner-content button {
+    width: 100%; /* Le bouton occupe toute la largeur de la bannière */
+    padding: 15px; /* Augmente la taille du bouton */
+  }
+}
+
+@media (max-width: 550px) {
+  .product {
+    max-width: 100%; /* Sur les très petits écrans le produit prend toute la largeur */
+  }
+  .product img {
+    height: 120px; /* Réduit encore plus la hauteur des images sur très petits écrans */
+  }
+  .banner-content button {
+    width: 80%; /* Le bouton prend 80% de la largeur disponible */
+    padding: 5px 12px; /* Augmente un peu le padding pour améliorer l'esthétique */
+    font-size: 1rem; /* Ajuste la taille du texte dans le bouton */
+  }
+  
+  .banner {
+    height: 250px; /* Réduit la hauteur de la bannière */
+  }
+  .banner-content h1 {
+    font-size: 1.8rem; /* Ajuste la taille du titre pour mieux s'adapter */
+  }
+}
+
+@media (max-width: 325px) {
+  .banner-content {
+    max-width: 95%; /* Limite la largeur à 95% de la bannière */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    word-wrap: break-word; /* Coupe les mots longs s’ils dépassent */
+  }
+
+  .banner-content h1 {
+    font-size: 1.2rem; /* Réduit la taille du texte */
+    padding: 10px; /* Réduit le padding pour mieux s’ajuster */
+  }
+
+  .banner-content button {
+    font-size: 0.8rem; /* Réduit la taille du texte du bouton */
+    padding: 8px; /* Réduit le padding du bouton */
+    width: 80%; /* Ajuste la largeur du bouton pour les petits écrans */
+  }
+
+  .banner {
+    height: auto; /* Permet à la bannière de s'ajuster au contenu */
+    padding: 10px; /* Ajoute un peu d’espace autour */
+    overflow: hidden; /* Empêche tout dépassement du contenu */
+  }
+ /* Pour une meilleure lisibilité sur de très petits écrans */
+ .controls .btn-sort {
+  padding: 12px 20px; /* Un peu plus de padding pour un meilleur confort */
+  width: 90%; /* Ajuster la largeur des boutons */
+  margin: 5px auto; /* Espacement vertical entre les boutons */
+}
+
+.controls .search-input {
+  padding: 10px; /* Ajuste la taille du champ de recherche */
+  width: 90%; /* Ajuste la largeur des boutons */
+  margin: 5px auto; /* Espacement vertical entre les boutons */
+}
+  
+}
+

@@ -1,0 +1,70 @@
+<div class="contact-container">
+    <h1>Formulaire de contact</h1>
+  
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+      <!-- Nom -->
+      <div class="form-group">
+        <label for="lastName">Nom</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="contact.lastName"
+          placeholder="Nom"
+          required
+        />
+      </div>
+  
+      <!-- Prénom -->
+      <div class="form-group">
+        <label for="firstName">Prénom</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="contact.firstName"
+          placeholder="Prénom"
+          required
+        />
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="contact.email"
+          placeholder="Votre e-mail"
+          required
+        />
+      </div>
+  
+      <!-- Commentaire -->
+      <div class="form-group">
+        <label for="comment">Commentaire</label>
+        <textarea
+          id="comment"
+          name="comment"
+          [(ngModel)]="contact.comment"
+          placeholder="Votre commentaire"
+          required
+        ></textarea>
+      </div>
+  
+      <!-- Bouton Envoyer -->
+      <button type="submit" [disabled]="!contactForm.valid" class="btn-sort">Envoyer</button>
+    </form>
+  
+    <!-- Carte Google Maps -->
+    <div class="map-container">
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1030.3788297437193!2d-0.5785221124886364!3d45.04686011769777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48002b10d2f455c9%3A0x4fe8ea67b9529d66!2s51%20Ldt%20Belia%2C%2033710%20Saint-Seurin-de-Bourg!5e1!3m2!1sfr!2sfr!4v1735381760777!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        class="map-frame"
+        allowfullscreen=""
+        title="Carte de localisation de 1 lieu dit Bélia, 33710 Saint Seurin de Bourg, France"
+        >
+        </iframe>
+    </div>
+  </div>

@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "name": "Figurine Astérix",
+      "description": "Figurine d'Astérix le Gaulois.",
+      "details": {
+        "material": "Résine",
+        "height": "12 cm",
+        "weight": "300 g"
+      },
+      "price": 15.99,
+      "imageUrl": "assets/images/asterix.jpg"
+    },
+
+    {
+      "id": 2,
+      "name": "Figurine Obélix",
+      "description": "Figurine d'Obélix, le meilleur ami d'Astérix.",
+      "details": {
+        "material": "Résine",
+        "height": "17 cm",
+        "weight": "500 g"
+      },
+      "price": 19.99,
+      "imageUrl": "assets/images/obelix.jpg"
+    },
+
+    {
+      "id": 3,
+      "name": "Figurine Idéfix",
+      "description": "Figurine d'Idéfix, le chien d'Obélix.",
+      "details": {
+        "material": "Résine",
+        "height": "5 cm",
+        "weight": "100 g"
+      },
+      "price": 10.99,
+      "imageUrl": "assets/images/idefix.jpg"
+    }
+]

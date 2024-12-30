@@ -1,0 +1,50 @@
+<!-- src/app/components/home/home.component.html -->
+
+<!-- Bannière avec image et texte -->
+<div class="banner">
+  <div class="banner-content">
+    <h1>Bienvenue au Petit Village – Découvrez nos produits uniques !</h1>
+    <button type="button" (click)="scrollToProducts()">Voir nos produits</button>
+  </div>
+</div>
+
+<!-- Présentation de l’entreprise -->
+<div class="company-description">
+  <p>“Au petit village” confectionne des figurines inspirées de la bande dessinée Astérix et Obélix, idéal pour les nostalgiques des aventures des célèbres Gaulois. Nos figurines sont faites main.</p>
+</div>
+
+<!-- Contrôles pour la recherche et le tri -->
+<div class="controls">
+  <input 
+    type="text" 
+    placeholder="Rechercher un produit..." 
+    [(ngModel)]="searchTerm" 
+    class="search-input"
+  />
+  <button type="button" (click)="setSortOrder('asc')" class="btn-sort">Prix croissant</button>
+  <button type="button" (click)="setSortOrder('desc')" class="btn-sort">Prix décroissant</button>
+</div>
+
+
+
+
+<!-- Liste des produits -->
+
+<div #productsSection class="products-container">
+  <div 
+    class="product" 
+    *ngFor="let product of products | filterByName: searchTerm | sortByPrice: sortOrder">
+   
+    <!-- Lien pour la page de détail du produit -->
+    <a [routerLink]="['/product', product.id]">
+      <img 
+        alt="Figurines Obélix, Astérix, Idéfix" 
+        [src]="product.imageUrl" 
+        [alt]="product.name" 
+      />
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <p>Prix: {{ product.price | currency : 'EUR'}}</p>
+    </a>
+  </div>
+</div>
